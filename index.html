@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Территория Без Буллинга | Точка Выбора</title>
+    <meta name="description" content="Интерактивный веб-ресурс по профилактике буллинга среди молодёжи.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <header class="header glass">
+        <div class="container header-inner">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <circle cx="16" cy="16" r="16" fill="var(--primary)"/>
+                    <path d="M10 16L14 20L22 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>No<span>Bully</span></span>
+            </div>
+            <nav class="nav" id="nav">
+                <a href="#stats">Статистика</a>
+                <a href="#types">Виды</a>
+                <a href="#quiz">Тест</a>
+                <a href="#checklist">Чек-лист</a>
+                <a href="#help">Помощь</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Сменить тему">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="burger" id="burger" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <span class="badge">
+                        <span class="badge-dot"></span>
+                        Социальный проект 2026
+                    </span>
+                    <h1>
+                        Территория <span class="gradient-text">без</span><br>
+                        <span class="outline-text">буллинга</span>
+                    </h1>
+                    <p class="hero-desc">Каждый третий подросток сталкивается с травлей. Узнай, как распознать, остановить и защитить себя и близких.</p>
+                    <div class="hero-buttons">
+                        <a href="#quiz" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Начать тест
+                        </a>
+                        <a href="#help" class="btn btn-ghost">Получить помощь</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal">
+                    <div class="hero-card">
+                        <img src="img/im1.jpg" alt="Поддержка" loading="lazy" width="500" height="500">
+                        <div class="floating-badge badge-1">💬 24/7 Поддержка</div>
+                        <div class="floating-badge badge-2">🛡️ Безопасно</div>
+                        <div class="floating-badge badge-3">❤️ Анонимно</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass reveal">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number" data-target="43">0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label">подростков сталкивались с буллингом</div>
+                    </div>
+                    <div class="stat-card glass reveal">
+                        <div class="stat-icon">📱</div>
+                        <div class="stat-number" data-target="70">0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label">случаев — кибербуллинг</div>
+                    </div>
+                    <div class="stat-card glass reveal">
+                        <div class="stat-icon">🤝</div>
+                        <div class="stat-number" data-target="85">0</div>
+                        <div class="stat-suffix">%</div>
+                        <div class="stat-label">проблем решаются при обращении за помощью</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">01 / Распознай</span>
+                    <h2 class="section-title">Виды <span class="gradient-text">буллинга</span></h2>
+                    <p class="section-subtitle">Наведи курсор на карточку, чтобы узнать подробности</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="flip-card reveal" onclick="openModal('verbal')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass">
+                                <div class="card-number">01</div>
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <h3>Вербальный</h3>
+                                <p class="card-hint">Наведи ↗</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Вербальный</h3>
+                                <p>Оскорбления, насмешки, прозвища, угрозы, распространение слухов. Слова ранят так же сильно, как кулаки.</p>
+                                <span class="card-cta">Подробнее →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card reveal" onclick="openModal('physical')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass">
+                                <div class="card-number">02</div>
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                </svg>
+                                <h3>Физический</h3>
+                                <p class="card-hint">Наведи ↗</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Физический</h3>
+                                <p>Удары, толчки, пинки, порча или кража вещей. Это прямое нарушение закона и прав человека.</p>
+                                <span class="card-cta">Подробнее →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card reveal" onclick="openModal('cyber')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass">
+                                <div class="card-number">03</div>
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                                <h3>Кибербуллинг</h3>
+                                <p class="card-hint">Наведи ↗</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Кибербуллинг</h3>
+                                <p>Травля в соцсетях, оскорбительные комментарии, слив личных фото, анонимные угрозы 24/7.</p>
+                                <span class="card-cta">Подробнее →</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flip-card reveal" onclick="openModal('social')">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front glass">
+                                <div class="card-number">04</div>
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <h3>Социальный</h3>
+                                <p class="card-hint">Наведи ↗</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Социальный</h3>
+                                <p>Изоляция, игнорирование, бойкот, исключение из группы. Тихая, но разрушительная форма травли.</p>
+                                <span class="card-cta">Подробнее →</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz" class="section quiz-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">02 / Проверь себя</span>
+                    <h2 class="section-title">Интерактивный <span class="gradient-text">тест</span></h2>
+                    <p class="section-subtitle">Узнай, насколько хорошо ты умеешь распознавать травлю</p>
+                </div>
+                <div class="quiz-container glass reveal">
+                    <div class="quiz-header">
+                        <span class="quiz-progress-text">Вопрос <span id="q-current">1</span> из <span id="q-total">5</span></span>
+                        <span class="quiz-score">Счёт: <span id="q-score">0</span></span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div id="quiz-box">
+                        <h3 id="question-text" class="question-text"></h3>
+                        <div id="options-box" class="options-box"></div>
+                    </div>
+                    <div id="result-box" class="result-box hidden">
+                        <div class="result-icon" id="result-icon"></div>
+                        <h3 id="result-title"></h3>
+                        <p id="result-desc"></p>
+                        <button id="restart-btn" class="btn btn-primary">Пройти ещё раз</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">03 / Действуй</span>
+                    <h2 class="section-title">Чек-лист <span class="gradient-text">безопасности</span></h2>
+                    <p class="section-subtitle">Отмечай пункты, чтобы составить личный план защиты</p>
+                </div>
+                <div class="checklist-wrapper glass reveal">
+                    <div class="checklist-progress">
+                        <div class="progress-info">
+                            <span>Прогресс:</span>
+                            <strong><span id="checked-count">0</span> / <span id="total-count">0</span></strong>
+                        </div>
+                        <div class="progress-bar-thin">
+                            <div class="progress-fill-thin" id="checklist-progress"></div>
+                        </div>
+                    </div>
+                    <ul class="checklist" id="checklist-items"></ul>
+                    <button class="btn btn-ghost btn-small" onclick="resetChecklist()">Сбросить прогресс</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="help" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">04 / Получи помощь</span>
+                    <h2 class="section-title">Ты <span class="gradient-text">не один</span></h2>
+                    <p class="section-subtitle">Выбери ситуацию и получи конкретный план действий</p>
+                </div>
+                <div class="support-layout reveal">
+                    <div class="support-image-wrapper">
+                        <img src="img/im2.jpg" alt="Поддержка" loading="lazy" width="500" height="500">
+                        <div class="image-overlay">
+                            <div class="overlay-text">
+                                <h3>Нужна помощь?</h3>
+                                <p>Мы рядом</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="support-content">
+                        <div class="support-grid">
+                            <button class="support-btn glass" data-scenario="victim">
+                                <span class="support-icon">🆘</span>
+                                <span>Я жертва травли</span>
+                            </button>
+                            <button class="support-btn glass" data-scenario="witness">
+                                <span class="support-icon">👁️</span>
+                                <span>Я свидетель</span>
+                            </button>
+                            <button class="support-btn glass" data-scenario="parent">
+                                <span class="support-icon">👨‍👩‍👧</span>
+                                <span>Я родитель</span>
+                            </button>
+                            <button class="support-btn glass" data-scenario="teacher">
+                                <span class="support-icon">📚</span>
+                                <span>Я педагог</span>
+                            </button>
+                        </div>
+                        <div id="support-result" class="support-result glass hidden">
+                            <h3 id="support-title"></h3>
+                            <p id="support-text"></p>
+                            <a href="tel:88002000122" class="btn btn-primary">📞 8-800-2000-122</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="chatbot" class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">05 / Помощник</span>
+                    <h2 class="section-title">Виртуальный <span class="gradient-text">помощник</span></h2>
+                    <p class="section-subtitle">Задай вопрос и получи мгновенный ответ</p>
+                </div>
+                <div class="chatbot glass reveal">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="chat-msg bot">
+                            <div class="chat-avatar">🤖</div>
+                            <div class="chat-bubble">Привет! Я помощник NoBully. Спроси меня о буллинге, например: «Как распознать травлю?» или «Куда обратиться?»</div>
+                        </div>
+                    </div>
+                    <div class="chat-suggestions" id="chat-suggestions">
+                        <button class="suggestion" data-q="распознать">Как распознать?</button>
+                        <button class="suggestion" data-q="обратиться">Куда обратиться?</button>
+                        <button class="suggestion" data-q="защитить">Как защититься?</button>
+                        <button class="suggestion" data-q="закон">Что говорит закон?</button>
+                    </div>
+                    <form class="chat-input-form" id="chat-form">
+                        <input type="text" id="chat-input" placeholder="Напиши свой вопрос..." autocomplete="off" required>
+                        <button type="submit" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="feedback-form glass reveal">
+                    <div class="section-header" style="margin-bottom: 20px;">
+                        <span class="section-tag">06 / Связь</span>
+                        <h2 class="section-title">Есть <span class="gradient-text">вопрос?</span></h2>
+                    </div>
+                    <form id="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="user-name">Имя</label>
+                                <input type="text" id="user-name" placeholder="Ваше имя" required>
+                                <small class="error-msg" id="name-error">Минимум 2 символа</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-email">Email</label>
+                                <input type="email" id="user-email" placeholder="example@mail.com" required>
+                                <small class="error-msg" id="email-error">Некорректный email</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="user-message">Сообщение</label>
+                            <textarea id="user-message" placeholder="Ваше сообщение..." rows="4" required></textarea>
+                            <small class="error-msg" id="message-error">Минимум 5 символов</small>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy-consent" required>
+                            <label for="privacy-consent">Я согласен на обработку персональных данных согласно <a href="#" onclick="showPrivacy(); return false;">Политике конфиденциальности</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: white; margin-bottom: 15px;">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="var(--primary)"/>
+                            <path d="M10 16L14 20L22 12" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span style="color: white;">No<span style="color: var(--primary);">Bully</span></span>
+                    </div>
+                    <p>Социальный проект по профилактике буллинга среди молодёжи.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="#stats">Статистика</a>
+                    <a href="#types">Виды буллинга</a>
+                    <a href="#quiz">Тест</a>
+                    <a href="#help">Помощь</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <a href="tel:88002000122">📞 8-800-2000-122</a>
+                    <a href="mailto:help@nobully.zone">✉️ help@nobully.zone</a>
+                    <a href="#" onclick="showPrivacy(); return false;">🔒 Политика конфиденциальности</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NoBully.Zone — Все права защищены</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal glass">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
